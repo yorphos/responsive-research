@@ -1,0 +1,17 @@
+html,
+body,
+#root,
+.root {
+	margin: 0;
+	height: 100%;
+}
+
+.root {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 7% auto;
+}
+
+.root nav.top-nav:first-child {
+  grid-column: 1 / 3;
+}

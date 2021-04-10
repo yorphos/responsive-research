@@ -1,0 +1,19 @@
+.top-nav {
+	display: grid;
+	grid-template-columns: 75px auto auto;
+	background-color: red;
+}
+
+.top-nav .top-nav-title {
+	margin: auto auto auto 0;
+}
+
+.top-nav .mini-login {
+	margin: auto 25px auto auto;
+}
+
+.hamburger {
+    background-color: blue;
+    padding: 25px;
+    margin: auto;
+}
