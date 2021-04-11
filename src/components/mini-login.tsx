@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './mini-login.css';
+import './mini-login.scss';
 
 class MiniLogin extends Component {
 	render() {

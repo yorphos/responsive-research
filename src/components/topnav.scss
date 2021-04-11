@@ -12,8 +12,6 @@
 	margin: auto 25px auto auto;
 }
 
-.hamburger {
-    background-color: blue;
-    padding: 25px;
-    margin: auto;
+.top-nav:first-child {
+	grid-column: 1 / 3;
 }

@@ -1,0 +1,19 @@
+.mini-login {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.mini-login :nth-child(3) {
+  margin: 10px auto auto auto;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.user-field-block *,
+.password-field-block * {
+  margin: auto;
+}
+
+/*# sourceMappingURL=mini-login.css.map */

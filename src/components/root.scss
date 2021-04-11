@@ -1,0 +1,26 @@
+html,
+body,
+#root,
+.root {
+	margin: 0;
+	height: 100%;
+}
+
+.root {
+	display: grid;
+	grid-template-rows: 7% auto;
+}
+
+.middle {
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.middle.closed {
+	grid-template-columns: auto;
+}
+
+.middle.open {	
+	grid-template-columns: 20% auto;
+}
