@@ -19,4 +19,4 @@ The purpose of the Researching Responsive Design (RRD) project is to develop a f
 2a. yarn start
 2b. yarn build `#for the commited`
 ```
-Demo @ [rrp.yorphos.xyz](rrp.yorphos.xyz "Hosted by Vercel.com, easy stuff!")
+Demo @ [rrp.yorphos.xyz](https://rrp.yorphos.xyz "Hosted by Vercel.com, easy stuff!")
