@@ -1,5 +1,14 @@
-.hamburger {
-    background-color: blue;
+@mixin hamburger {
     padding: 1.7em;
     margin: auto auto auto 1em;
+}
+
+.hamburger-open {
+    @include hamburger;
+    background-color: yellow;
+}
+
+.hamburger-closed {
+    @include hamburger;
+    background-color: blue;
 }
