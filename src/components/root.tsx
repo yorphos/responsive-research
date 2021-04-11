@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TopNav from './topnav';
 import SideBar from './sidebar';
+import MainContent from './main-content';
 import { HamburgerGrouping } from './hamburger';
 
 import '../components/root.scss';
@@ -35,9 +36,7 @@ class Root extends Component<RootProps, RootState> {
 				<TopNav hamburgerGrouping={this.state.hamburgerGrouping} />
 				<div className={'middle ' + (this.state.hamburgerGrouping.isOpen ? 'open' : 'closed')}>
 					<SideBar isOpen={this.state.hamburgerGrouping.isOpen} />
-					<div className='main-content'>
-						test2
-					</div>
+					<MainContent />
 				</div>
 			</div>
 		);
