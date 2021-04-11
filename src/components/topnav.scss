@@ -1,6 +1,6 @@
 .top-nav {
 	display: grid;
-	grid-template-columns: 75px auto auto;
+	grid-template-columns: 5em auto auto;
 	background-color: red;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .top-nav .mini-login {
-	margin: auto 25px auto auto;
+	margin: auto 2em auto auto;
 }
 
 .top-nav:first-child {

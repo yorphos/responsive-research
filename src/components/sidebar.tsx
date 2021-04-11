@@ -4,15 +4,16 @@ import './siderbar.scss';
 
 type SideBarProps = {
 	isOpen: boolean;
-}
+};
 
 class SideBar extends Component<SideBarProps, {}> {
 	render() {
-		return (
-			<div className={'sidebar ' + (this.props.isOpen ? '' : 'closed')}>
-				test
-			</div>
-		);
+		switch(this.props.isOpen) {
+			case true:
+				return <div className='sidebar-mini'>te</div>
+			case false:
+				return <div className='sidebar-extended'>test!</div>
+		}
 	}
 }
 

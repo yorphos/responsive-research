@@ -9,7 +9,7 @@ import '../components/root.scss';
 type RootProps = {};
 
 type RootState = {
-	hamburgerGrouping: HamburgerGrouping,
+	hamburgerGrouping: HamburgerGrouping;
 };
 
 class Root extends Component<RootProps, RootState> {
@@ -19,22 +19,24 @@ class Root extends Component<RootProps, RootState> {
 			hamburgerGrouping: {
 				isOpen: false,
 				onClick: this._doHamburger,
-			}
-		}
+			},
+		};
 	}
 
 	_doHamburger = () => {
-		this.setState({hamburgerGrouping: {
-			isOpen: !this.state.hamburgerGrouping.isOpen,
-			onClick: this.state.hamburgerGrouping.onClick,
-		}});
+		this.setState({
+			hamburgerGrouping: {
+				isOpen: !this.state.hamburgerGrouping.isOpen,
+				onClick: this.state.hamburgerGrouping.onClick,
+			},
+		});
 	};
 
 	render() {
 		return (
 			<div className='root'>
 				<TopNav hamburgerGrouping={this.state.hamburgerGrouping} />
-				<div className={'middle ' + (this.state.hamburgerGrouping.isOpen ? 'open' : 'closed')}>
+				<div className='middle'>
 					<SideBar isOpen={this.state.hamburgerGrouping.isOpen} />
 					<MainContent />
 				</div>

@@ -1,10 +1,18 @@
-.sidebar {
-    display: grid;
-    background-color: green;
-    justify-content: center;
-    align-items: center;
+@mixin sidebar {
+	display: grid;
+	background-color: green;
 }
 
-.sidebar.closed {
-    display: none;
+.sidebar-mini {
+    @include sidebar;
+	justify-content: left;
+	align-items: center;
+	width: 5em;
+}
+
+.sidebar-extended {
+    @include sidebar;
+	justify-content: center;
+	align-items: center;
+	width: 15em;
 }
