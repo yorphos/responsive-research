@@ -6,9 +6,9 @@ type HamburgerProps = {
 	hamburgerGrouping: HamburgerGrouping,
 };
 
-export type HamburgerGrouping = {
+export interface HamburgerGrouping {
 	isOpen: boolean,
-	onClick: (event: React.MouseEvent) => void,
+	onClick: (e: React.MouseEvent) => void,
 }
 
 class Hamburger extends Component<HamburgerProps, {}> {
