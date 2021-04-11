@@ -1,7 +1,7 @@
 # Researching Responsive Design!!!
 
 We are mixing it up with:
-- React
+- React (create-react-app)
 - Typescript
 - Bootstrap
 - Sass
@@ -19,4 +19,4 @@ The purpose of the Researching Responsive Design (RRD) project is to develop a f
 2a. yarn start
 2b. yarn build `#for the commited`
 ```
-demo coming soon
+Demo @ [rrp.yorphos.xyz](rrp.yorphos.xyz "Hosted by Vercel.com, easy stuff!")
