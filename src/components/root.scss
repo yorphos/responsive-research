@@ -7,18 +7,18 @@ html,
 body,
 #root,
 .root {
-  margin: 0;
-  height: 100%;
+	margin: 0;
+	height: 100%;
 }
 
 .root {
-  display: grid;
-  grid-template-rows: max-content auto;
+	display: grid;
+	grid-template-rows: max-content auto;
 }
 
 .middle {
-  display: grid;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-template-columns: auto auto;
+	display: grid;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-template-columns: auto auto;
 }

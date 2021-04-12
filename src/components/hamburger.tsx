@@ -1,25 +1,26 @@
-import React from "react";
+import React from 'react';
 
-import "./hamburger.scss";
+import './hamburger.scss';
 
 type HamburgerProps = {
-  hamburgerGrouping: HamburgerGrouping;
+	hamburgerGrouping: HamburgerGrouping;
 };
 
 export interface HamburgerGrouping {
-  isOpen: boolean;
-  onClick: (e: React.MouseEvent) => void;
+	isOpen: boolean;
+	onClick: (e: React.MouseEvent) => void;
 }
 
 const Hamburger = (props: HamburgerProps) => {
-  return (
-    <div
-      className={
-        "hamburger-" + (props.hamburgerGrouping.isOpen ? "open " : "closed ")
-      }
-      onClick={props.hamburgerGrouping.onClick}
-    />
-  );
+	return (
+		<div
+			className={
+				'hamburger-' +
+				(props.hamburgerGrouping.isOpen ? 'open ' : 'closed ')
+			}
+			onClick={props.hamburgerGrouping.onClick}
+		/>
+	);
 };
 
 export default Hamburger;
