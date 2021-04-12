@@ -1,19 +1,24 @@
+$mobile-break: 600px;
+$tablet-landscape-break: 768px;
+$desktop-break: 992px;
+$desktop-extended-break: 1200px;
+
 html,
 body,
 #root,
 .root {
-	margin: 0;
-	height: 100%;
+  margin: 0;
+  height: 100%;
 }
 
 .root {
-	display: grid;
-	grid-template-rows: 6.5em auto;
+  display: grid;
+  grid-template-rows: max-content auto;
 }
 
 .middle {
-	display: grid;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-template-columns: auto auto;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-template-columns: auto auto;
 }
