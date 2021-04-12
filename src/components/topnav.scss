@@ -1,8 +1,11 @@
+$top-nav-pad: 0.75em;
+
 .top-nav {
+	$n: $top-nav-pad;
 	display: grid;
-	grid-template-columns: 5em auto auto;
+	grid-template-columns: 4em auto auto;
 	background-color: red;
-	padding: 0.75em 0;
+	padding: $top-nav-pad 0;
 }
 
 .top-nav .top-nav-title {

@@ -1,18 +1,30 @@
 @mixin sidebar {
-	display: grid;
+	box-sizing: border-box;
+	justify-content: start;
 	background-color: green;
 }
 
 .sidebar-mini {
 	@include sidebar;
-	justify-content: left;
-	align-items: center;
-	width: 5em;
+	width: 4em;
 }
 
 .sidebar-extended {
 	@include sidebar;
-	justify-content: center;
-	align-items: center;
 	width: 15em;
+}
+
+.mini-icon-stack {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: max-content;
+
+	* {
+		font-size: 24px;
+		margin: 2em auto 0 auto;
+	}
+
+	*:first-child {
+		margin-top: 1.5em;
+	}
 }

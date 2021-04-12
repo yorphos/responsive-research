@@ -1,13 +1,26 @@
+@import 'topnav';
+
 .main-content {
+	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: auto max-content;
+	grid-template-rows: calc(100vh - #{$top-nav-pad} * 8.24);
+	overflow: hidden;
 }
 
 .main-article {
+	box-sizing: border-box;
 	background-color: pink;
+	overflow: auto;
+	overflow-x: hidden;
+	padding: 1em;
 }
 
 .side-article {
+	box-sizing: border-box;
 	background-color: purple;
 	width: 20em;
+	overflow: auto;
+	overflow-x: hidden;
+	padding: 1em;
 }

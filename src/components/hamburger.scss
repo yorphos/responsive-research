@@ -1,6 +1,7 @@
 @mixin hamburger {
-	padding: 1.7em;
-	margin: auto 1em auto auto;
+	box-sizing: border-box;
+	padding: 30%;
+	margin: auto;
 }
 
 .hamburger-open {
