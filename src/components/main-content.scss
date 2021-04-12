@@ -1,4 +1,13 @@
 .main-content {
 	display: grid;
-	grid-template-columns: 4fr 1fr;
+	grid-template-columns: auto max-content;
+}
+
+.main-article {
+	background-color: pink;
+}
+
+.side-article {
+	background-color: purple;
+	width: 20em;
 }
