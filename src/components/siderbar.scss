@@ -1,30 +1,27 @@
+$mini-width: 3.5em;
+$extended-width: 8.5em;
+
 @mixin sidebar {
 	box-sizing: border-box;
-	justify-content: start;
+	align-items: center;
 	background-color: green;
+	transition: width 0.5s;
+	overflow: hidden;
 }
 
 .sidebar-mini {
 	@include sidebar;
-	width: 4em;
+	width: $mini-width;
 }
 
 .sidebar-extended {
 	@include sidebar;
-	width: 15em;
+	width: $extended-width;
 }
 
 .mini-icon-stack {
 	box-sizing: border-box;
 	display: grid;
-	grid-template-rows: max-content;
-
-	* {
-		font-size: 24px;
-		margin: 2em auto 0 auto;
-	}
-
-	*:first-child {
-		margin-top: 1.5em;
-	}
+	grid-template-rows: min-content;
+	margin-top: 1.5em;
 }

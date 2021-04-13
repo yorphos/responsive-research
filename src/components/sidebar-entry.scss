@@ -1,0 +1,74 @@
+@use 'sidebar';
+
+@keyframes sweep-in {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes sweep-out {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0;
+	}
+}
+
+@keyframes sweep-out-margin {
+	0% {
+		margin-right: 0.1em;
+	}
+	90% {
+		margin-right: 0.1em;
+	}
+	100% {
+		margin-right: 0.5em;
+	}
+}
+
+.sidebar-entry {
+	$font-mult: 1.5;
+	box-sizing: border-box;
+	display: grid;
+	margin-bottom: 1em;
+	font-size: 1rem * $font-mult;
+
+	&.hide-label {
+		grid-template-columns: min-content;
+
+		> svg {
+			animation: sweep-out-margin 1s forwards;
+		}
+
+		> .sidebar-entry-label {
+			animation: sweep-out 0.5s forwards;
+			width: 0;
+		}
+	}
+
+	&.unhide-label {
+		grid-template-columns: min-content min-content;
+
+		> svg {
+			margin-right: 0.1em;
+		}
+
+		> .sidebar-entry-label {
+			animation: sweep-in 0.5s forwards;
+		}
+	}
+
+	> svg {
+		margin: auto 0.5em auto 0.5em;
+		height: 1.5em;
+	}
+
+	> .sidebar-entry-label {
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
