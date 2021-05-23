@@ -1,35 +1,53 @@
-import React, { useState } from 'react';
-import TopNav from './topnav';
-import SideBar from './sidebar';
+import TopNav from './top-nav';
+import Sidebar from './sidebar';
+import { useState } from 'react';
 import MainContent from './main-content';
-import { HamburgerGrouping } from './hamburger';
+import SideContent from './side-content';
 
-import '../components/root.scss';
+import './root.scss';
+
+export const Page = {
+  A: 0,
+  B: 1,
+  C: 2,
+};
 
 type RootProps = {};
 
-const Root = (props: RootProps) => {
-	const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+function Root(props: RootProps) {
+  const [sidebarState, setSidebarState] = useState(false);
+  const [contentClasses, setContentClasses] = useState('content');
+  const [currPage, setCurrPage] = useState(0);
 
-	const _doHamburger = (e: React.MouseEvent) => {
-		e.stopPropagation();
-		setHamburgerOpen(!isHamburgerOpen);
-	};
+  const toggleSidebar = () => {
+    switch (sidebarState) {
+      case true: {
+        setContentClasses('content open-sidebar');
+        break;
+      }
+      case false: {
+        setContentClasses('content');
+        break;
+      }
+    }
 
-	let hamburgerGrouping: HamburgerGrouping = {
-		isOpen: isHamburgerOpen,
-		onClick: _doHamburger,
-	};
+    setSidebarState(!sidebarState);
+  };
 
-	return (
-		<div className="root">
-			<TopNav hamburgerGrouping={hamburgerGrouping} />
-			<div className="middle">
-				<SideBar isOpen={hamburgerGrouping.isOpen} />
-				<MainContent />
-			</div>
-		</div>
-	);
-};
+  const setPage = (page: number) => {
+    setCurrPage(page);
+  };
+
+  return (
+    <div className='root'>
+      <TopNav toggleSidebar={toggleSidebar} />
+      <div className={contentClasses}>
+        <Sidebar setPage={setPage} />
+        <MainContent page={currPage} />
+        <SideContent />
+      </div>
+    </div>
+  );
+}
 
 export default Root;

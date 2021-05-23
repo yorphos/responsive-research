@@ -1,41 +1,19 @@
-import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons';
-
-import './siderbar.scss';
+import { Page } from './root';
 import SidebarEntry from './sidebar-entry';
+import './sidebar.scss';
 
-type SideBarProps = {
-	isOpen: boolean;
+type SidebarProps = {
+  setPage: (page: number) => void;
 };
 
-const SideBar = (props: SideBarProps) => {
-	let sidebarClass;
-	switch (props.isOpen) {
-		case true: {
-			sidebarClass = 'sidebar-extended';
-			break;
-		}
-		case false: {
-			sidebarClass = 'sidebar-mini';
-			break;
-		}
-	}
+function Sidebar(props: SidebarProps) {
+  return (
+    <div className='sidebar'>
+      <SidebarEntry text='test1' page={Page.A} setPage={props.setPage} />
+      <SidebarEntry text='test2' page={Page.B} setPage={props.setPage} />
+      <SidebarEntry text='test3' page={Page.C} setPage={props.setPage} />
+    </div>
+  );
+}
 
-	return (
-		<div className={sidebarClass}>
-			<div className="mini-icon-stack">
-				<SidebarEntry
-					icon={faHome}
-					label="Home"
-					isOpen={props.isOpen}
-				/>
-				<SidebarEntry
-					icon={faNewspaper}
-					label="News"
-					isOpen={props.isOpen}
-				/>
-			</div>
-		</div>
-	);
-};
-
-export default SideBar;
+export default Sidebar;
